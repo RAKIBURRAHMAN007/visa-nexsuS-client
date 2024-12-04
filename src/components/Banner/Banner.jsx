@@ -26,7 +26,7 @@ const Banner = () => {
                 {/* Slide 1 */}
                 <SwiperSlide>
                     <div className="relative w-full">
-                        <img className='w-full bg-cover md:h-[500px]' src={img2} alt="Banner 2" />
+                        <img className='w-full bg-cover h-[200px]  md:h-[500px]' src={img2} alt="Banner 2" />
                         <div className="absolute bottom-4 mx-3  md:bottom-10 md:left-5 text-white bg-black/80 md:p-4 p-1 rounded-lg">
                             <h2 className="text-xs md:text-4xl font-bold text-shadow-md">Study Abroad Opportunities</h2>
                             <p className="text-xs md:text-lg mt-2">Explore educational visas for top international institutions.</p>

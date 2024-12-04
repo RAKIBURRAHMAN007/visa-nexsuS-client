@@ -5,17 +5,18 @@ import { AuthContext } from '../../provider/AuthProvider';
 const NavBar = () => {
     const { logOut, user } = useContext(AuthContext);
     const links = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/learning'>All Visas</Link></li>
-        <li><Link to='/tutorials'>Add Visa</Link></li>
-        <li><Link to='/aboutUs'>My Added Visas</Link></li>
-        <li><Link to='/aboutUs'>My Visa Applications</Link></li>
+  
+        <li><NavLink  to='/'>Home</NavLink></li>
+        <li><NavLink to='/allVisa'>All Visas</NavLink></li>
+        <li><NavLink to='/addVisa'>Add Visa</NavLink></li>
+        <li><NavLink to='/myAddedVisa'>My Added Visas</NavLink></li>
+        <li><NavLink to='/myVisaApplications'>My Visa Applications</NavLink></li>
 
 
     </>
     return (
 
-        <div className="navbar bg-slate-500  sticky backdrop-blur-md bg-opacity-65 top-0 z-10 ">
+        <div className="navbar bg-[#162e40] sticky backdrop-blur-md  top-0 z-10 ">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost text-white lg:hidden">
@@ -40,7 +41,7 @@ const NavBar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-base md:text-2xl  text-white "><span className='bg-black text-white p-2'>VISA</span> NAVIGATOR</a>
+                <a className="btn btn-ghost text-sm md:text-2xl  text-white "><span className='bg-black text-white p-2'>VISA</span> NAVIGATOR</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-base  text-white ">
@@ -73,11 +74,19 @@ const NavBar = () => {
 
                         :
 
-                        <div>
-                            <Link><button className='btn'>Login</button></Link>
-                            <Link><button className='btn'>Register</button></Link>
-                        </div>
-            
+                        <div className='flex gap-2'>
+                        <Link to='/login'>
+                            <button className='rounded-lg py-2 md:px-4 w-14 md:w-28 text-xs md:text-sm font-semibold bg-black text-white border-2 border-gray-400 focus:ring-4 focus:ring-offset-2 focus:ring-gray-400 transition-all duration-300 ease-in-out shadow-lg'>
+                                Login
+                            </button>
+                        </Link>
+                        <Link to='/register'>
+                            <button className='rounded-lg py-2 md:px-4 w-16 md:w-32 text-xs md:text-sm font-semibold bg-black text-white border-2 border-gray-400 focus:ring-4 focus:ring-offset-2 focus:ring-gray-400 transition-all duration-300 ease-in-out shadow-lg'>
+                                Register
+                            </button>
+                        </Link>
+                    </div>
+                    
 
 
 
