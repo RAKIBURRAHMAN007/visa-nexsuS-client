@@ -11,6 +11,7 @@ import MyAddedVisas from "../components/MyAddedVisas/MyAddedVisas";
 import MyVisaApplications from "../components/MyVIsaApplications/MyVisaApplications";
 import LoginPage from "../components/LoginPage/LoginPage";
 import RegisterPage from "../components/RegisterPage/RegisterPage";
+import Home from "../components/Home/Home";
 
 
 
@@ -22,7 +23,7 @@ import RegisterPage from "../components/RegisterPage/RegisterPage";
       children:[
         {
             path: '/',
-            element: <Banner></Banner>
+            element: <Home></Home>
         },
         {
             path: '/allVisa',

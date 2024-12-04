@@ -16,7 +16,7 @@ const NavBar = () => {
     );
 
     return (
-        <div className="navbar bg-[#162e40] sticky backdrop-blur-md top-0 z-10">
+        <div className="navbar bg-[#162e40] sticky backdrop-blur-md top-0 z-10 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost text-white lg:hidden">
@@ -37,13 +37,13 @@ const NavBar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-[#9660ea] text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                        className="menu menu-sm dropdown-content bg-[#162e40] text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
                     >
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-sm md:text-2xl text-white">
-                    <span className="bg-black text-white p-2">VISA</span> NAVIGATOR
+                <a className="btn-ghost text-sm md:text-2xl text-white border border-white pr-1">
+                    <span className="bg-black text-white p-2">VISA</span>  NEXUS
                 </a>
             </div>
 
@@ -65,12 +65,12 @@ const NavBar = () => {
                         <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                             <li><a>User Name </a></li>
                             <li><a> <span className="block font-bold text-sm">{user.displayName}</span></a></li>
-                            <li onClick={logOut} className='bg-black text-white hover:bg-blue-400'><a> <Link
+                            <li onClick={logOut} className='bg-black text-white hover:bg-blue-400'> <Link
                                 
                                 className="block text-sm  px-2 py-1 rounded-lg"
                             >
                                 Logout
-                            </Link></a></li>
+                            </Link></li>
                         </ul>
                     </div>
                 ) : (

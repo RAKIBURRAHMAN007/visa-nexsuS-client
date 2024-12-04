@@ -40,7 +40,7 @@ const LoginPage = () => {
     }
     return (
         <div>
-            <h1 className='text-center font-bold text-xl md:text-5xl pt-12'>Login to Your Visa  Navigator <br />Account</h1>
+            <h1 className='text-center font-bold text-xl md:text-5xl pt-12'>Login to Your Visa   Nexus <br />Account</h1>
             <p className='text-center mt-4'>Explore, Apply, and Manage Your Visas Effortlessly.</p>
             <div className='md:w-2/4 mx-auto bg-slate-200 mt-6 border '>
                 <form onSubmit={handleLogin} className="card-body">
@@ -82,7 +82,7 @@ const LoginPage = () => {
                 </form>
             </div>
             <div className='flex justify-center w-2/4 mx-auto mt-1'>
-                <h1 className=' text-base'>New to Visa Navigator? <Link to='/register' className='underline text-[#9660ea]'>Register Now</Link> </h1>
+                <h1 className=' text-base'>New to Visa  Nexus? <Link to='/register' className='underline text-[#9660ea]'>Register Now</Link> </h1>
             </div>
             <div className='flex justify-center mt-4'>
                 <GoogleButton
