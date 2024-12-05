@@ -98,7 +98,12 @@ const CountryToolTip = () => {
             />
             <p className="mt-2 font-medium">{country.name}</p>
           </a>
-          <Tooltip id={`tooltip-${index}`}>
+          <Tooltip
+            id={`tooltip-${index}`}
+            place="top"
+            effect="solid"
+            className="bg-gray-800 text-white p-4 rounded-md shadow-lg max-w-[90vw] sm:max-w-xs"
+          >
             <div>
               <h3 className="font-bold text-lg mb-2">{country.name}</h3>
               <p className="text-sm font-medium mb-2">Visa Types and Costs:</p>
