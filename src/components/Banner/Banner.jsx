@@ -34,7 +34,16 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
 
-                {/* Slide 2 */}
+                <SwiperSlide>
+                    <div className="relative w-full">
+                        <img className='w-full bg-cover h-[200px] md:h-[500px]' src={img4} alt="Banner 4" />
+                        <div className="absolute bottom-4 mx-3  md:bottom-10 md:left-5 text-white bg-black/80 md:p-4 p-1 rounded-lg">
+                            <h2 className="text-xs md:text-4xl font-bold text-shadow-md">Tourist Visas Made Simple</h2>
+                            <p className=" text-xs md:text-lg mt-2">Plan your dream vacation with hassle-free visa services.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                
                 <SwiperSlide>
                     <div className="relative w-full">
                         <img className='w-full bg-cover h-[200px] md:h-[500px]' src={img3} alt="Banner 3" />
@@ -45,16 +54,8 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
 
-                {/* Slide 3 */}
-                <SwiperSlide>
-                    <div className="relative w-full">
-                        <img className='w-full bg-cover h-[200px] md:h-[500px]' src={img4} alt="Banner 4" />
-                        <div className="absolute bottom-4 mx-3  md:bottom-10 md:left-5 text-white bg-black/80 md:p-4 p-1 rounded-lg">
-                            <h2 className="text-xs md:text-4xl font-bold text-shadow-md">Tourist Visas Made Simple</h2>
-                            <p className=" text-xs md:text-lg mt-2">Plan your dream vacation with hassle-free visa services.</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                
+               
             </Swiper>
         </div>
     );
