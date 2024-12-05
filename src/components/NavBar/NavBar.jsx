@@ -7,11 +7,11 @@ const NavBar = () => {
 
     const links = (
         <>
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/allVisa'>All Visas</NavLink></li>
-            <li><NavLink to='/addVisa'>Add Visa</NavLink></li>
-            <li><NavLink to='/myAddedVisa'>My Added Visas</NavLink></li>
-            <li><NavLink to='/myVisaApplications'>My Visa Applications</NavLink></li>
+            <li><NavLink className='hover:bg-black ' to='/'>Home</NavLink></li>
+            <li><NavLink className='hover:bg-black' to='/allVisa'>All Visas</NavLink></li>
+            <li><NavLink className='hover:bg-black' to='/addVisa'>Add Visa</NavLink></li>
+            <li><NavLink className='hover:bg-black' to='/myAddedVisa'>My Added Visas</NavLink></li>
+            <li><NavLink className='hover:bg-black' to='/myVisaApplications'>My Visa Applications</NavLink></li>
         </>
     );
 
@@ -48,7 +48,7 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-base text-white">
+                <ul className="menu menu-horizontal px-1 text-base  text-white">
                     {links}
                 </ul>
             </div>

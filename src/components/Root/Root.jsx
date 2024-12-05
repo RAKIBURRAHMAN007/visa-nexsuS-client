@@ -7,15 +7,15 @@ import 'react-toastify/dist/ReactToastify.css';
 const Root = () => {
     return (
         <div>
-            <div className='mb-64'>
+        <div className="min-h-screen flex flex-col justify-between">
+            <div>
                 <NavBar></NavBar>
                 <Outlet></Outlet>
                 <ToastContainer position="top-center" />
-
             </div>
-
-            <Footer></Footer>
         </div>
+        <Footer></Footer>
+    </div>
     );
 };
 
