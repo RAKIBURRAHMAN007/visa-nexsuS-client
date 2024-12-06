@@ -38,7 +38,8 @@ import VisaDetails from "../components/VisaDetails/VisaDetails";
         },
         {
             path: '/myAddedVisa',
-            element: <PrivateRoute><MyAddedVisas></MyAddedVisas></PrivateRoute>
+            element: <PrivateRoute><MyAddedVisas></MyAddedVisas></PrivateRoute>,
+            loader: ()=> fetch('http://localhost:5000/visa')
         },
         {
             path: '/myVisaApplications',

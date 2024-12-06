@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const AddVisas = () => {
-    const [error, setError] = useState({}); // To handle potential error messages
+   
+    const {user} = useContext(AuthContext);
 
     const handleAddVisa = (e) => {
         e.preventDefault();
@@ -20,6 +22,7 @@ const AddVisas = () => {
             fee: form.fee.value,
             validity: form.validity.value,
             applicationMethod: form.applicationMethod.value,
+            email: user.email
         };
         console.log(visaData); // Replace this with API submission logic
         // sending data to the server

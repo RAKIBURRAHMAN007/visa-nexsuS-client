@@ -6,9 +6,7 @@ const Footer = () => {
 
             <div className='md:flex justify-between mt-3'>
                 <div className='md:w-1/5'>
-                    {/* <a className="btn btn-ghost rounded-none text-sm md:text-2xl  text-white border border-white ">
-                        <span className="bg-black btn rounded-none text-white ">VISA</span>  NEXUS
-                    </a> */}
+                 
                     <button className='text-white border pr-4'><span className="bg-black btn rounded-none text-white ">VISA</span>  NEXUS</button>
                     <p className='text-white text-sm flex justify-center  opacity-75 mt-4'> Stay connected for updates and insights to make your journey seamless.</p>
 

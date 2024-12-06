@@ -82,8 +82,8 @@ const NavBar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className=" btn-ghost text-sm md:text-2xl text-white border border-white pr-1">
-                    <span className="bg-black btn rounded-none text-white p-2">VISA</span>  NEXUS
+                <a className=" btn-ghost text-xs md:text-2xl text-white border border-white pr-1">
+                    <span className="bg-black text-xs md:text-xl btn rounded-none text-white p-2">VISA</span>  NEXUS
                 </a>
             </div>
 
