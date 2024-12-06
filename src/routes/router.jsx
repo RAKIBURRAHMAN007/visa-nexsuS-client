@@ -12,6 +12,7 @@ import MyVisaApplications from "../components/MyVIsaApplications/MyVisaApplicati
 import LoginPage from "../components/LoginPage/LoginPage";
 import RegisterPage from "../components/RegisterPage/RegisterPage";
 import Home from "../components/Home/Home";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -31,15 +32,15 @@ import Home from "../components/Home/Home";
         },
         {
             path: '/addVisa',
-            element: <AddVisas></AddVisas>
+            element: <PrivateRoute><AddVisas></AddVisas></PrivateRoute>
         },
         {
             path: '/myAddedVisa',
-            element: <MyAddedVisas></MyAddedVisas> 
+            element: <PrivateRoute><MyAddedVisas></MyAddedVisas></PrivateRoute>
         },
         {
             path: '/myVisaApplications',
-            element: <MyVisaApplications></MyVisaApplications>
+            element: <PrivateRoute><MyVisaApplications></MyVisaApplications></PrivateRoute>
         },
         {
             path: '/login',

@@ -4,15 +4,55 @@ import { AuthContext } from '../../provider/AuthProvider';
 
 const NavBar = () => {
     const { logOut, user } = useContext(AuthContext);
+    const [active, setActive] = useState('home'); 
 
+    const handleActive = (link) => {
+      setActive(link); 
+    };
+  
     const links = (
-        <>
-            <li><NavLink className='hover:bg-black ' to='/'>Home</NavLink></li>
-            <li><NavLink className='hover:bg-black' to='/allVisa'>All Visas</NavLink></li>
-            <li><NavLink className='hover:bg-black' to='/addVisa'>Add Visa</NavLink></li>
-            <li><NavLink className='hover:bg-black' to='/myAddedVisa'>My Added Visas</NavLink></li>
-            <li><NavLink className='hover:bg-black' to='/myVisaApplications'>My Visa Applications</NavLink></li>
-        </>
+      <>
+        
+          <button
+            onClick={() => handleActive('home')}
+            className={active === 'home' ? 'bg-black text-white p-2' : ''}
+          >
+            <Link to="/">Home</Link>
+          </button>
+        
+        
+          <button
+            onClick={() => handleActive('allVisa')}
+            className={active === 'allVisa' ? 'bg-black text-white p-2' : ''}
+          >
+            <Link to="/allVisa">All Visas</Link>
+          </button>
+        
+        
+          <button
+            onClick={() => handleActive('addVisa')}
+            className={active === 'addVisa' ? 'bg-black text-white p-2' : ''}
+          >
+            <Link to="/addVisa">Add Visa</Link>
+          </button>
+        
+        
+          <button
+            onClick={() => handleActive('myAddedVisa')}
+            className={active === 'myAddedVisa' ? 'bg-black text-white p-2' : ''}
+          >
+            <Link to="/myAddedVisa">My Added Visas</Link>
+          </button>
+        
+        
+          <button
+            onClick={() => handleActive('myVisaApplications')}
+            className={active === 'myVisaApplications' ? 'bg-black text-white p-2' : ''}
+          >
+            <Link to="/myVisaApplications">My Visa Applications</Link>
+          </button>
+        
+      </>
     );
 
     return (
@@ -37,7 +77,7 @@ const NavBar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-[#162e40] text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                        className="menu menu-sm dropdown-content bg-[#162e40] text-white rounded-box z-[1] mt-3 w-52 p-2 shadow space-y-1"
                     >
                         {links}
                     </ul>
@@ -48,12 +88,12 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-base  text-white">
+                <ul className="menu menu-horizontal px-1 gap-4 text-sm text-white">
                     {links}
                 </ul>
             </div>
 
-            <div className="navbar-end">
+            <div className="ml-2 navbar-end">
                 {user ? (
                    
                     <div className="dropdown dropdown-end dropdown-hover mr-4">
