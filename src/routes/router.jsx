@@ -13,6 +13,7 @@ import LoginPage from "../components/LoginPage/LoginPage";
 import RegisterPage from "../components/RegisterPage/RegisterPage";
 import Home from "../components/Home/Home";
 import PrivateRoute from "./PrivateRoute";
+import VisaDetails from "../components/VisaDetails/VisaDetails";
 
 
 
@@ -28,7 +29,8 @@ import PrivateRoute from "./PrivateRoute";
         },
         {
             path: '/allVisa',
-            element: <AllVisas></AllVisas>
+            element: <AllVisas></AllVisas>,
+            loader: ()=> fetch('http://localhost:5000/visa')
         },
         {
             path: '/addVisa',
@@ -50,6 +52,11 @@ import PrivateRoute from "./PrivateRoute";
         {
             path: '/register',
             element: <RegisterPage></RegisterPage>
+        },
+        {
+          path: '/visaDetails/:id',
+          element: <PrivateRoute><VisaDetails></VisaDetails></PrivateRoute>,
+          loader: ({params})=> fetch(`http://localhost:5000/visa/${params.id}`)
         }
       ]
       

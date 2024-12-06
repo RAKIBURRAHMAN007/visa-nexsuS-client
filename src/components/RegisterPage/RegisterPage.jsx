@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { auth, AuthContext } from '../../provider/AuthProvider';
 import { Result } from 'postcss';
 import { toast } from 'react-toastify';
@@ -10,6 +10,7 @@ const RegisterPage = () => {
     const [error, setError] = useState({});
    
     const navigate = useNavigate();
+    const location = useLocation();
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -29,7 +30,7 @@ const RegisterPage = () => {
             .then(result => {
                 const registeredUser = result.user;
                
-                navigate('/')
+                navigate(location?.state ? location.state : '/')
                 console.log(registeredUser)
                 const profile = {
                     displayName: name,
