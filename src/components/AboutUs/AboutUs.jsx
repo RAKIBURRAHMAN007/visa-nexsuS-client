@@ -7,7 +7,7 @@ const AboutUs = () => {
             <div className='md:w-1/2'>
                 <img src={about} alt="" />
 
-                <Link to='/allVisa'>  <button className='btn bg-black mt-10 w-1/2 text-white p-2 rounded-xl'>See All Visas</button></Link>
+                <Link to='/allVisa'>  <button className='btn bg-black mt-10 w-1/2 text-white p-2 rounded-xl'>Learn More</button></Link>
 
             </div>
             <div className='md:w-1/2'>

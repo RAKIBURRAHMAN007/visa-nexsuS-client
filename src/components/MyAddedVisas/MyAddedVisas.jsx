@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2'
 
 const MyAddedVisas = () => {
     const { user } = useContext(AuthContext);
@@ -41,7 +42,7 @@ const MyAddedVisas = () => {
             applicationMethod: form.applicationMethod.value,
         };
 
-       
+
         fetch(`http://localhost:5000/visa/${currentVisa._id}`, {
             method: 'PUT',
             headers: {
@@ -54,7 +55,7 @@ const MyAddedVisas = () => {
                 if (data.modifiedCount > 0) {
                     toast.success('Visa Updated Successfully');
 
-                    
+
                     const updatedVisas = dataByLoggedUser.map((visa) =>
                         visa._id === currentVisa._id ? updatedVisa : visa
                     );
@@ -65,6 +66,41 @@ const MyAddedVisas = () => {
             })
             .catch((err) => console.error("Failed to update visa:", err));
     };
+    const handleDelete = (id) => {
+        console.log('delete', id)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/visa/${id}`, {
+                    method: 'DELETE'
+
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            const updatedVisas = dataByLoggedUser.filter((visa) => visa._id !== id);
+                            setDataByLoggedUser(updatedVisas);
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Visa data has been deleted.",
+                                icon: "success"
+                            });
+
+                        }
+                    })
+
+            }
+        });
+
+    }
 
     return (
         <div>
@@ -91,7 +127,7 @@ const MyAddedVisas = () => {
                                 >
                                     Update
                                 </button>
-                                <button className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600">
+                                <button onClick={() => handleDelete(visa._id)} className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600">
                                     Delete
                                 </button>
                             </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LatestVisaCard from './LatestVisaCard';
+import { Link } from 'react-router-dom';
 
 const LatestVisa = () => {
     const [latestVisas, setLatestVisas] = useState([]);
@@ -19,6 +20,9 @@ const LatestVisa = () => {
                         latestVisas.map(latestVisa => <LatestVisaCard latestVisa={latestVisa}></LatestVisaCard>)
                     }
                 </div>
+            </div>
+            <div className='flex justify-center'>
+                <Link to='/allVisa'>  <button className='btn bg-black mt-10 px-10  text-white p-2 rounded-xl'>See All Visas</button></Link>
             </div>
         </div>
 
