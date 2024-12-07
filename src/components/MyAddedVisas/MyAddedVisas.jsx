@@ -41,7 +41,7 @@ const MyAddedVisas = () => {
             applicationMethod: form.applicationMethod.value,
         };
 
-       r
+       
         fetch(`http://localhost:5000/visa/${currentVisa._id}`, {
             method: 'PUT',
             headers: {
