@@ -15,7 +15,7 @@ const VisaCard = ({ visa }) => {
                 <h2 className="card-title">{countryName}</h2>
                 <p className='font-bold'>Visa Type:<span className='font-normal'>{visaType}</span></p>
                 <p className='font-bold'>Cost: <span className='font-normal'>{fee}$</span></p>
-                <p className='font-bold'>ProcessingTime: <span className='font-normal'>{processingTime}days</span></p>
+                <p className='font-bold'>Processing Time: <span className='font-normal'>{processingTime}days</span></p>
                 <div className="card-actions justify-end">
                     <Link to={`/visaDetails/${_id}`}  ><button className="btn btn-primary text-black bg-white hover:text-white hover:bg-red-500 hover:border-white border-black border ">See Details</button></Link>
                 </div>

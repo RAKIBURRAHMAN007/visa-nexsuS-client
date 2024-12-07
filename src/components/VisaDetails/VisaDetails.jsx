@@ -49,8 +49,22 @@ const VisaDetails = () => {
         };
         console.log("Application Submitted:", applicationData);
 
-        // Mock submission logic
-        toast.success("Application submitted successfully!");
+        fetch('http://localhost:5000/appliedVisa',{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(applicationData)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.insertedId){
+                toast.success("Application submitted successfully!");
+            }
+        })
+
+    
 
         handleCloseModal();
     };

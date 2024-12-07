@@ -44,7 +44,9 @@ import ThemeProvider from "../provider/ThemeProvider";
         },
         {
             path: '/myVisaApplications',
-            element: <PrivateRoute><MyVisaApplications></MyVisaApplications></PrivateRoute>
+            element: <PrivateRoute><MyVisaApplications></MyVisaApplications></PrivateRoute>,
+            loader: ()=> fetch('http://localhost:5000/appliedVisa')
+            
         },
         {
             path: '/login',
