@@ -8,7 +8,7 @@ const Root = () => {
     return (
         <div>
         <div className="min-h-screen flex flex-col justify-between">
-            <div className='mb-8'>
+            <div className=''>
                 <NavBar></NavBar>
                 <Outlet></Outlet>
                 <ToastContainer position="top-center" />

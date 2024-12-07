@@ -6,7 +6,7 @@ const AllVisas = () => {
     const visas = useLoaderData();
     console.log(visas)
     return (
-        <div className='mt-16 w-11/12 mx-auto'>
+        <div className='mt-16 mb-16 w-11/12 mx-auto'>
             <div >
                 <h1 className='text-xl font-bold text-center md:text-4xl'>Discover Visas Around <br /> the World</h1>
                 <p className='mt-5 text-center text-sm'>Explore visa options from every corner of the globe. Whether you’re traveling for leisure,<br /> pursuing education, or seizing work opportunities,<br /> we’ve got the right information for you.</p>

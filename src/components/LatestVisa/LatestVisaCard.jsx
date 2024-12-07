@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../provider/ThemeProvider';
 
 const LatestVisaCard = ({latestVisa}) => {
+    const { theme, setTheme } = useContext(ThemeContext);
     const { countryImage, countryName, visaType, fee,
         processingTime, _id,
         validity,
         applicationMethod
          } = latestVisa;
     return (
-        <div className="card card-compact bg-base-100  lg:w-72 mt-4 shadow-xl hover:bg-[#162e40]  hover:text-white">
+        <div className={`card card-compact bg-base-100   lg:w-72 mt-4 shadow-xl hover:bg-[#162e40]  hover:text-white ${theme === 'dark' ? 'bg-white text-black' : ''}`}>
             <figure>
                 <img className=' w-28 bg-cover '
                     src={countryImage} />

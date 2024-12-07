@@ -24,8 +24,7 @@ const AddVisas = () => {
             applicationMethod: form.applicationMethod.value,
             email: user.email
         };
-        console.log(visaData); // Replace this with API submission logic
-        // sending data to the server
+        
         fetch('http://localhost:5000/visa', {
             method: "POST",
             headers: {
@@ -45,7 +44,7 @@ const AddVisas = () => {
     };
 
     return (
-        <div>
+        <div className='mb-16'>
             <h1 className="text-center font-bold text-xl md:text-5xl pt-12 mb-3">
                 Add a New Visa to <br /> the Database
             </h1>

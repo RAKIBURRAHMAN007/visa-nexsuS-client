@@ -14,6 +14,7 @@ import RegisterPage from "../components/RegisterPage/RegisterPage";
 import Home from "../components/Home/Home";
 import PrivateRoute from "./PrivateRoute";
 import VisaDetails from "../components/VisaDetails/VisaDetails";
+import ThemeProvider from "../provider/ThemeProvider";
 
 
 
@@ -25,7 +26,7 @@ import VisaDetails from "../components/VisaDetails/VisaDetails";
       children:[
         {
             path: '/',
-            element: <Home></Home>
+            element: <ThemeProvider><Home></Home></ThemeProvider>
         },
         {
             path: '/allVisa',
