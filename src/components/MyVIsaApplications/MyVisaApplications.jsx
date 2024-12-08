@@ -33,7 +33,7 @@ const MyVisaApplications = () => {
                             setLoggedUserData(loggedUserData.filter(visa => visa._id !== id));
 
                             Swal.fire({
-                                title: "Deleted!",
+                                title: "Canceled!",
                                 text: "Your Visa application has been cancelled.",
                                 icon: "success"
                             });
