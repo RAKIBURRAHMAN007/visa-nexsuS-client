@@ -84,7 +84,7 @@ const AddVisas = () => {
                         <select name="visaType" className=" input input-bordered" required>
                             <option value="Tourist visa">Tourist visa</option>
                             <option value="Student visa">Student visa</option>
-                            <option value="Official visa">Work & Employment visa</option>
+                            <option value="Work & Employment visa">Work & Employment visa</option>
                         </select>
                     </div>
 
