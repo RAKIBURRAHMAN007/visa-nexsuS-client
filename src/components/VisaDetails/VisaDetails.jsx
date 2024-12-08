@@ -49,7 +49,7 @@ const VisaDetails = () => {
         };
         console.log("Application Submitted:", applicationData);
 
-        fetch('http://localhost:5000/appliedVisa',{
+        fetch('https://visa-navigator-server-pi.vercel.app/appliedVisa',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -43,7 +43,7 @@ const MyAddedVisas = () => {
         };
 
 
-        fetch(`http://localhost:5000/visa/${currentVisa._id}`, {
+        fetch(`https://visa-navigator-server-pi.vercel.app/visa/${currentVisa._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const MyAddedVisas = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/visa/${id}`, {
+                fetch(`https://visa-navigator-server-pi.vercel.app/visa/${id}`, {
                     method: 'DELETE'
 
                 })

@@ -31,7 +31,7 @@ import ThemeProvider from "../provider/ThemeProvider";
         {
             path: '/allVisa',
             element: <AllVisas></AllVisas>,
-            loader: ()=> fetch('http://localhost:5000/visa')
+            loader: ()=> fetch('https://visa-navigator-server-pi.vercel.app/visa')
         },
         {
             path: '/addVisa',
@@ -40,12 +40,12 @@ import ThemeProvider from "../provider/ThemeProvider";
         {
             path: '/myAddedVisa',
             element: <PrivateRoute><MyAddedVisas></MyAddedVisas></PrivateRoute>,
-            loader: ()=> fetch('http://localhost:5000/visa')
+            loader: ()=> fetch('https://visa-navigator-server-pi.vercel.app/visa')
         },
         {
             path: '/myVisaApplications',
             element: <PrivateRoute><MyVisaApplications></MyVisaApplications></PrivateRoute>,
-            loader: ()=> fetch('http://localhost:5000/appliedVisa')
+            loader: ()=> fetch('https://visa-navigator-server-pi.vercel.app/appliedVisa')
             
         },
         {
@@ -60,7 +60,7 @@ import ThemeProvider from "../provider/ThemeProvider";
         {
           path: '/visaDetails/:id',
           element: <PrivateRoute><VisaDetails></VisaDetails></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/visa/${params.id}`)
+          loader: ({params})=> fetch(`https://visa-navigator-server-pi.vercel.app/visa/${params.id}`)
         }
       ]
       
