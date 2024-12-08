@@ -54,7 +54,7 @@ const RegisterPage = () => {
 
     }
     return (
-        <div>
+        <div className='pb-10'>
             <h1 className='text-center font-bold text-xl md:text-5xl pt-12'>Register to Get <br />Started!</h1>
             <div className='md:w-2/4 mx-auto bg-slate-200 mt-6'>
                 <form onSubmit={handleRegister} className="card-body">

@@ -39,7 +39,7 @@ const LoginPage = () => {
 
     }
     return (
-        <div>
+        <div className='pb-10'>
             <h1 className='text-center font-bold text-xl md:text-5xl pt-12'>Login to Your Visa   Nexus <br />Account</h1>
             <p className='text-center mt-4'>Explore, Apply, and Manage Your Visas Effortlessly.</p>
             <div className='md:w-2/4 mx-auto bg-slate-200 mt-6 border '>
