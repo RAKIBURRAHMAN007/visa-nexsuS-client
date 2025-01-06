@@ -57,7 +57,7 @@ const MyVisaApplications = () => {
     };
 
     return (
-        <div className='w-11/12 mx-auto mt-10'>
+        <div className='w-11/12 mx-auto mb-10 mt-10'>
             <h1 className='text-center text-xl font-bold md:text-3xl lg:text-5xl'>
                 Manage Your Visa <br />Applications
             </h1>
@@ -69,7 +69,7 @@ const MyVisaApplications = () => {
             </div>
             <div className='overflow-x-auto py-8'>
                 <table className="min-w-full table-auto border-collapse">
-                    <thead className="bg-gray-200">
+                    <thead className="bg-gray-800 text-white">
                         <tr>
                             <th className="px-4 py-2 text-left">Country</th>
                             <th className="px-4 py-2 text-left">Visa Type</th>

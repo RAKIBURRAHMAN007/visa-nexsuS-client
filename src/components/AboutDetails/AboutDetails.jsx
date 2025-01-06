@@ -91,7 +91,7 @@ const AboutUs = () => {
 
             </div>
             <div className="mt-4 mb-6 text-center">
-                <Link to="/allVisa" className="btn btn-outline border-b-8 ">
+                <Link to="/allVisa" className="btn bg-black mt-10 px-10  text-white p-2 rounded-xl ">
                     Get Started
                 </Link>
             </div>

@@ -2,8 +2,10 @@ import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../provider/AuthProvider';
+import { ThemeContext } from '../../provider/ThemeProvider';
 
 const VisaDetails = () => {
+    const {theme} =useContext(ThemeContext)
     const visaData = useLoaderData();
     const {user} = useContext(AuthContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -70,7 +72,7 @@ const VisaDetails = () => {
     };
 
     return (
-        <div className="p-6 max-w-3xl mx-auto bg-white shadow-md rounded-lg mb-10 mt-10">
+        <div className={`p-6 max-w-3xl mx-auto  shadow-md rounded-lg mb-10 mt-10 ${theme === 'dark' ? 'bg-gray-800 text-white' : ''}`}>
 
             <div className="flex justify-center mb-6">
                 <img
@@ -123,7 +125,7 @@ const VisaDetails = () => {
            
             {isModalOpen && (
                 <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="bg-white p-6 rounded-md w-96 max-w-full">
+                    <div className="bg-gray-400 text-black p-6 rounded-md w-96 max-w-full">
                         <h2 className="text-xl font-bold mb-4">Apply for Visa</h2>
                         <form onSubmit={handleFormSubmit}>
                             <div className="mb-4">

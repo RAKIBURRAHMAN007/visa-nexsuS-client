@@ -4,62 +4,73 @@ import { AuthContext } from '../../provider/AuthProvider';
 
 const NavBar = () => {
     const { logOut, user } = useContext(AuthContext);
-    const [active, setActive] = useState('home'); 
+    const [active, setActive] = useState('home');
 
     const handleActive = (link) => {
-      setActive(link); 
+        setActive(link);
     };
-  
-    const links = (
-      <>
-        
-          <button
-            onClick={() => handleActive('home')}
-            className={active === 'home' ? 'bg-black text-white p-2' : ''}
-          >
-            <Link className=" hover:bg-black hover:text-white p-2 " to="/">Home</Link>
-          </button>
-        
-        
-          <button
-            onClick={() => handleActive('allVisa')}
-            className={active === 'allVisa' ? 'bg-black text-white p-2' : ''}
-          >
-            <Link className=" hover:bg-black hover:text-white p-2 " to="/allVisa">All Visas</Link>
-          </button>
-        
-        
-          <button
-            onClick={() => handleActive('addVisa')}
-            className={active === 'addVisa' ? 'bg-black text-white p-2' : ''}
-          >
-            <Link className=" hover:bg-black hover:text-white p-2 " to="/addVisa">Add Visa</Link>
-          </button>
-        
-        
-          <button
-            onClick={() => handleActive('myAddedVisa')}
-            className={active === 'myAddedVisa' ? 'bg-black text-white p-2' : ''}
-          >
-            <Link className=" hover:bg-black hover:text-white p-2 "  to="/myAddedVisa">My Added Visas</Link>
-          </button>
-        
-        
-          <button
-            onClick={() => handleActive('myVisaApplications')}
-            className={active === 'myVisaApplications' ? 'bg-black text-white p-2' : ''}
-          >
-            <Link  className=" hover:bg-black hover:text-white p-2 "  to="/myVisaApplications">My Visa Applications</Link>
-          </button>
 
-          <button
-            onClick={() => handleActive('aboutUs')}
-            className={active === 'aboutUs' ? 'bg-black text-white p-2' : ''}
-          >
-            <Link  className=" hover:bg-black hover:text-white p-2 "  to="/aboutUs">About Us</Link>
-          </button>
-        
-      </>
+    const links = (
+        <>
+
+            <button
+                onClick={() => handleActive('home')}
+                className={active === 'home' ? 'bg-black text-white p-2' : ''}
+            >
+                <Link className=" hover:bg-black hover:text-white p-2 " to="/">Home</Link>
+            </button>
+
+
+            <button
+                onClick={() => handleActive('allVisa')}
+                className={active === 'allVisa' ? 'bg-black text-white p-2' : ''}
+            >
+                <Link className=" hover:bg-black hover:text-white p-2 " to="/allVisa">All Visas</Link>
+            </button>
+
+            {
+                user && <button
+                    onClick={() => handleActive('addVisa')}
+                    className={active === 'addVisa' ? 'bg-black text-white p-2' : ''}
+                >
+                    <Link className=" hover:bg-black hover:text-white p-2 " to="/addVisa">Add Visa</Link>
+                </button>
+
+            }
+
+
+
+            {
+                user && <button
+                    onClick={() => handleActive('myAddedVisa')}
+                    className={active === 'myAddedVisa' ? 'bg-black text-white p-2' : ''}
+                >
+                    <Link className=" hover:bg-black hover:text-white p-2 " to="/myAddedVisa">My Added Visas</Link>
+                </button>
+            }
+
+
+
+
+            {
+                user && <button
+                    onClick={() => handleActive('myVisaApplications')}
+                    className={active === 'myVisaApplications' ? 'bg-black text-white p-2' : ''}
+                >
+                    <Link className=" hover:bg-black hover:text-white p-2 " to="/myVisaApplications">My Visa Applications</Link>
+                </button>
+
+            }
+
+
+            <button
+                onClick={() => handleActive('aboutUs')}
+                className={active === 'aboutUs' ? 'bg-black text-white p-2' : ''}
+            >
+                <Link className=" hover:bg-black hover:text-white p-2 " to="/aboutUs">About Us</Link>
+            </button>
+
+        </>
     );
 
     return (
@@ -102,18 +113,18 @@ const NavBar = () => {
 
             <div className="ml-2 navbar-end">
                 {user ? (
-                   
+
                     <div className="dropdown dropdown-end dropdown-hover mr-4">
                         <div tabIndex={0} role="button" className="border  w-10 rounded-full">  <img
                             className=" w-full rounded-full px-1 py-1"
                             src={user.photoURL}
                             alt="user"
                         /></div>
-                        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                        <ul tabIndex={0} className="dropdown-content menu bg-[#162e40] text-white rounded-box z-[1] w-52 p-2 shadow">
                             <li><a>User Name </a></li>
                             <li><a> <span className="block font-bold text-sm">{user.displayName}</span></a></li>
                             <li onClick={logOut} className='bg-black text-white hover:bg-blue-400'> <Link
-                                
+
                                 className="block text-sm  px-2 py-1 rounded-lg"
                             >
                                 Logout

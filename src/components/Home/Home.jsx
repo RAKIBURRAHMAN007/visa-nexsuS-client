@@ -5,6 +5,7 @@ import LatestVisa from '../LatestVisa/LatestVisa';
 import AboutUs from '../AboutUs/AboutUs';
 import Countrys from '../Countrys/Countrys';
 import Success from '../OurSuccess/Success';
+import Review from '../Review/Review';
 
 const Home = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -65,6 +66,7 @@ const Home = () => {
       <AboutUs />
       <Countrys />
       <Success />
+      <Review></Review>
     </div>
   );
 };

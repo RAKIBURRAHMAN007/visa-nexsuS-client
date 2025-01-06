@@ -34,7 +34,7 @@ const AllVisas = () => {
           
             <div className="flex justify-center  mt-8">
                 <select
-                    className="border-2 font-bold rounded-md px-4 py-2 text-sm"
+                    className="border-2 font-bold bg-black text-white rounded-md px-4 py-2 text-sm"
                     value={selectedVisaType}
                     onChange={handleFilterChange}
                 >

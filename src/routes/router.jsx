@@ -27,7 +27,7 @@ import AboutDetails from "../components/AboutDetails/AboutDetails";
       children:[
         {
             path: '/',
-            element: <ThemeProvider><Home></Home></ThemeProvider>
+            element: <Home></Home>
         },
         {
             path: '/allVisa',

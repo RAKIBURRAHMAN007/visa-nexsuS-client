@@ -112,7 +112,7 @@ const MyAddedVisas = () => {
                     <div className="overflow-x-auto">
                         <table className="w-full border-collapse border border-gray-300">
                             <thead>
-                                <tr className="bg-gray-100">
+                                <tr className="bg-gray-800 text-white">
                                     <th className="border border-gray-300 px-4 py-2">Flag</th>
                                     <th className="border border-gray-300 px-4 py-2">Country</th>
                                     <th className="border border-gray-300 px-4 py-2">Visa Type</th>
@@ -125,7 +125,7 @@ const MyAddedVisas = () => {
                             </thead>
                             <tbody>
                                 {dataByLoggedUser.map((visa, index) => (
-                                    <tr key={index} className="hover:bg-gray-50">
+                                    <tr key={index} className="">
                                         <td className="border border-gray-300 px-4 py-2">
                                             <img
                                                 src={visa.countryImage}
@@ -169,7 +169,7 @@ const MyAddedVisas = () => {
 
             {isModalOpen && currentVisa && (
                 <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="bg-gray-200 p-6 rounded-md w-96 max-w-full max-h-[90vh] overflow-y-auto">
+                    <div className="bg-gray-400 text-black p-6 rounded-md w-96 max-w-full max-h-[90vh] overflow-y-auto">
                         <h2 className="text-2xl mb-4">Update Visa Information</h2>
                         <form onSubmit={handleFormSubmit} className="card-body">
 
