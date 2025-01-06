@@ -104,39 +104,67 @@ const MyAddedVisas = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+            <div className="w-11/12 mx-auto mb-16">
+                <h1 className='text-center mt-9 mb-12 text-xl font-bold md:text-3xl lg:text-5xl'>
+                    My Added visa
+                </h1>
                 {dataByLoggedUser.length !== 0 ? (
-                    dataByLoggedUser.map((visa, index) => (
-                        <div key={index} className="border rounded-lg shadow-md p-4">
-                            <img
-                                src={visa.countryImage}
-                                alt={`Flag of ${visa.countryName}`}
-                                className="w-full h-40 object-cover rounded-md"
-                            />
-                            <h2 className="text-xl font-semibold mt-2">{visa.countryName}</h2>
-                            <p><strong>Visa Type:</strong> {visa.visaType}</p>
-                            <p><strong>Processing Time:</strong> {visa.processingTime} days</p>
-                            <p><strong>Fee:</strong> ${visa.fee}</p>
-                            <p><strong>Validity:</strong> {visa.validity} days</p>
-                            <p><strong>Application Method:</strong> {visa.applicationMethod}</p>
-
-                            <div className="flex justify-between mt-4">
-                                <button
-                                    onClick={() => handleUpdate(visa)}
-                                    className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
-                                >
-                                    Update
-                                </button>
-                                <button onClick={() => handleDelete(visa._id)} className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600">
-                                    Delete
-                                </button>
-                            </div>
-                        </div>
-                    ))
+                    <div className="overflow-x-auto">
+                        <table className="w-full border-collapse border border-gray-300">
+                            <thead>
+                                <tr className="bg-gray-100">
+                                    <th className="border border-gray-300 px-4 py-2">Flag</th>
+                                    <th className="border border-gray-300 px-4 py-2">Country</th>
+                                    <th className="border border-gray-300 px-4 py-2">Visa Type</th>
+                                    <th className="border border-gray-300 px-4 py-2">Processing Time</th>
+                                    <th className="border border-gray-300 px-4 py-2">Fee</th>
+                                    <th className="border border-gray-300 px-4 py-2">Validity</th>
+                                    <th className="border border-gray-300 px-4 py-2">Application Method</th>
+                                    <th className="border border-gray-300 px-4 py-2">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {dataByLoggedUser.map((visa, index) => (
+                                    <tr key={index} className="hover:bg-gray-50">
+                                        <td className="border border-gray-300 px-4 py-2">
+                                            <img
+                                                src={visa.countryImage}
+                                                alt={`Flag of ${visa.countryName}`}
+                                                className="w-16 h-10 object-cover"
+                                            />
+                                        </td>
+                                        <td className="border border-gray-300 px-4 py-2">{visa.countryName}</td>
+                                        <td className="border border-gray-300 px-4 py-2">{visa.visaType}</td>
+                                        <td className="border border-gray-300 px-4 py-2">{visa.processingTime} days</td>
+                                        <td className="border border-gray-300 px-4 py-2">${visa.fee}</td>
+                                        <td className="border border-gray-300 px-4 py-2">{visa.validity} days</td>
+                                        <td className="border border-gray-300 px-4 py-2">{visa.applicationMethod}</td>
+                                        <td className="border border-gray-300 px-4 py-2">
+                                            <div className="flex space-x-2">
+                                                <button
+                                                    onClick={() => handleUpdate(visa)}
+                                                    className="bg-blue-500 text-white py-1 px-3 rounded-md hover:bg-blue-600"
+                                                >
+                                                    Update
+                                                </button>
+                                                <button
+                                                    onClick={() => handleDelete(visa._id)}
+                                                    className="bg-red-500 text-white py-1 px-3 rounded-md hover:bg-red-600"
+                                                >
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 ) : (
                     <p>No data available.</p>
                 )}
             </div>
+
 
 
             {isModalOpen && currentVisa && (
