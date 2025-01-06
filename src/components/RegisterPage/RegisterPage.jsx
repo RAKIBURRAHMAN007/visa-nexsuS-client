@@ -121,7 +121,7 @@ const RegisterPage = () => {
                         }
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary bg-[#9660ea] text-white text-xl font-mono">
+                        <button className="btn btn-primary bg-black text-white text-xl">
                             Register
                         </button>
                     </div>
