@@ -9,7 +9,7 @@ const Success = () => {
         loop: 0
     })
     return (
-        <div className='mt-32 pb-32'>
+        <div className='mt-32 pb-32 w-11/12 mx-auto'>
 
             <div className='App flex justify-center mb-36'>
                <button className='font-bold md:text-2xl'>Our Success  <span className='text-red-500'>{text}</span> </button>
