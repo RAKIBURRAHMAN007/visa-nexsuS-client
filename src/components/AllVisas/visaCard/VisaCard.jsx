@@ -5,7 +5,7 @@ const VisaCard = ({ visa }) => {
     const { countryImage, countryName, visaType, fee,
         processingTime,_id } = visa;
     return (
-        <div className="card card-compact bg-base-100  lg:w-56 mt-4 shadow-xl hover:bg-[#162e40]  hover:text-white">
+        <div className="card card-compact bg-base-100   mt-4 shadow-xl hover:bg-[#162e40]  hover:text-white">
             <figure>
                 <img className=' w-28 bg-cover '
                     src={countryImage}/>

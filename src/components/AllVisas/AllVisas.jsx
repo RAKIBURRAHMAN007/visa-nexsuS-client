@@ -46,10 +46,10 @@ const AllVisas = () => {
             </div>
 
            
-            <div className='md:flex justify-center'>
-                <div className='md:grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-16'>
+            <div className=' '>
+                <div className='md:grid gap-10 md:grid-cols-2 lg:grid-cols-4  w-full mt-16'>
                     {filteredVisas.map(visa => (
-                        <VisaCard key={visa._id} visa={visa} />
+                        <VisaCard key={visa._id} visa={visa}  />
                     ))}
                 </div>
             </div>
