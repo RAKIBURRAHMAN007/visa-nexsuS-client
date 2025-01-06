@@ -3,11 +3,11 @@ import about from '../../assets/about.jpg'
 import { Link } from 'react-router-dom';
 const AboutUs = () => {
     return (
-        <div className='mt-20 w-11/12 mx-auto clear-start md:flex gap-6'>
+        <div  className='mt-20 w-11/12 mx-auto clear-start md:flex gap-6'>
             <div className='md:w-1/2'>
                 <img src={about} alt="" />
 
-                <Link to='/allVisa'>  <button className='btn bg-black mt-10 w-1/2 text-white p-2 rounded-xl'>Learn More</button></Link>
+                <Link to='/aboutUs'>  <button className='btn bg-black mt-10 w-1/2 text-white p-2 rounded-xl'>Learn More</button></Link>
 
             </div>
             <div className='md:w-1/2'>

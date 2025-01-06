@@ -17,7 +17,7 @@ const NavBar = () => {
             onClick={() => handleActive('home')}
             className={active === 'home' ? 'bg-black text-white p-2' : ''}
           >
-            <Link to="/">Home</Link>
+            <Link className=" hover:bg-black hover:text-white p-2 " to="/">Home</Link>
           </button>
         
         
@@ -25,7 +25,7 @@ const NavBar = () => {
             onClick={() => handleActive('allVisa')}
             className={active === 'allVisa' ? 'bg-black text-white p-2' : ''}
           >
-            <Link to="/allVisa">All Visas</Link>
+            <Link className=" hover:bg-black hover:text-white p-2 " to="/allVisa">All Visas</Link>
           </button>
         
         
@@ -33,7 +33,7 @@ const NavBar = () => {
             onClick={() => handleActive('addVisa')}
             className={active === 'addVisa' ? 'bg-black text-white p-2' : ''}
           >
-            <Link to="/addVisa">Add Visa</Link>
+            <Link className=" hover:bg-black hover:text-white p-2 " to="/addVisa">Add Visa</Link>
           </button>
         
         
@@ -41,7 +41,7 @@ const NavBar = () => {
             onClick={() => handleActive('myAddedVisa')}
             className={active === 'myAddedVisa' ? 'bg-black text-white p-2' : ''}
           >
-            <Link to="/myAddedVisa">My Added Visas</Link>
+            <Link className=" hover:bg-black hover:text-white p-2 "  to="/myAddedVisa">My Added Visas</Link>
           </button>
         
         
@@ -49,7 +49,14 @@ const NavBar = () => {
             onClick={() => handleActive('myVisaApplications')}
             className={active === 'myVisaApplications' ? 'bg-black text-white p-2' : ''}
           >
-            <Link to="/myVisaApplications">My Visa Applications</Link>
+            <Link  className=" hover:bg-black hover:text-white p-2 "  to="/myVisaApplications">My Visa Applications</Link>
+          </button>
+
+          <button
+            onClick={() => handleActive('aboutUs')}
+            className={active === 'aboutUs' ? 'bg-black text-white p-2' : ''}
+          >
+            <Link  className=" hover:bg-black hover:text-white p-2 "  to="/aboutUs">About Us</Link>
           </button>
         
       </>

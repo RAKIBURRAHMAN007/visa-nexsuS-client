@@ -15,6 +15,7 @@ import Home from "../components/Home/Home";
 import PrivateRoute from "./PrivateRoute";
 import VisaDetails from "../components/VisaDetails/VisaDetails";
 import ThemeProvider from "../provider/ThemeProvider";
+import AboutDetails from "../components/AboutDetails/AboutDetails";
 
 
 
@@ -61,6 +62,10 @@ import ThemeProvider from "../provider/ThemeProvider";
           path: '/visaDetails/:id',
           element: <PrivateRoute><VisaDetails></VisaDetails></PrivateRoute>,
           loader: ({params})=> fetch(`https://visa-navigator-server-pi.vercel.app/visa/${params.id}`)
+        },
+        {
+          path: '/aboutUs',
+          element: <AboutDetails></AboutDetails>
         }
       ]
       
