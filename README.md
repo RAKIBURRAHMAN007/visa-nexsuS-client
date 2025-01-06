@@ -1,6 +1,6 @@
 # project name : Visa Nexus : A user-friendly Visa Navigator Portal.
 
-# purpose  : 
+# purpose of project  : 
 The Visa Navigator Portal aims to simplify and enhance the process of managing visa-related activities by providing a user-friendly platform. It allows users to explore various visa options, check detailed requirements, apply for visas, and track their applications seamlessly. Designed with security and accessibility in mind, the portal ensures that only authenticated users can manage their applications while providing real-time data management features. Its dynamic and responsive interface adapts to all devices, offering a smooth and visually appealing user experience. Additionally, the portal incorporates advanced functionalities such as search, filtering by visa types, and a dark/light theme toggle to improve usability and personalization. By focusing on scalability and error-free performance with clear notifications, the Visa Navigator Portal aims to streamline the visa application process and make it more accessible and efficient for all users.
 
 # Live URL : https://visa-nexus.netlify.app/
