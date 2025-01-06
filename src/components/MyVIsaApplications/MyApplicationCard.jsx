@@ -9,7 +9,7 @@ const MyApplicationCard = ({ singleLoggedVisaData, handleDelete }) => {
     } = singleLoggedVisaData;
 
     return (
-        <div className="card card-compact bg-base-100 lg:w-72 mt-4 shadow-xl hover:bg-[#162e40] hover:text-white">
+        <div className="card card-compact bg-base-100  mt-4 shadow-xl hover:bg-[#162e40] hover:text-white">
             <figure>
                 <img className='w-28 bg-cover' src={countryImage} />
             </figure>

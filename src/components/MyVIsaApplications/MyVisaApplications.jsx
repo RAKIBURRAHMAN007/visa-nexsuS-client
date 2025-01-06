@@ -70,8 +70,8 @@ const MyVisaApplications = () => {
                     <input className='bg-[#162e40] text-white rounded-xl rounded-l-none p-1' type="submit" value="Search" />
                 </form>
             </div>
-            <div className='md:flex justify-center'>
-                <div className='pb-20 pt-7 md:grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+            <div className=''>
+                <div className='pb-20 pt-7 md:grid gap-6 md:grid-cols-2 lg:grid-cols-4'>
                     {loggedUserData.length > 0 ? (
                         loggedUserData.map(singleLoggedVisaData => (
                             <MyApplicationCard
