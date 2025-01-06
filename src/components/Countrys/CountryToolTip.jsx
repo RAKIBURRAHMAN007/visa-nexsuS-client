@@ -87,7 +87,7 @@ const countries = [
 
 const CountryToolTip = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-14 w-full">
       {countries.map((country, index) => (
         <div key={index} className="text-center">
           <a data-tooltip-id={`tooltip-${index}`}>

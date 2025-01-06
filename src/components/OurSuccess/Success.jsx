@@ -15,7 +15,7 @@ const Success = () => {
                <button className='font-bold md:text-2xl'>Our Success  <span className='text-red-500'>{text}</span> </button>
             </div>
 
-            <div className="lg:flex space-y-24  lg:space-y-0 justify-center w-11/12 mx-auto gap-8 mt-12">
+            <div className="lg:flex space-y-24  lg:space-y-0 justify-center  gap-8 mt-12">
                 <div className={`card w-full lg:w-80 hover:bg-[#162e40]  hover:text-white  bg-white shadow-xl border border-gray-200 rounded-lg ${theme === 'dark' ? 'bg-white text-black' : ''}`}>
 
                     <div className="card-body  text-center flex justify-center items-center mt-1">

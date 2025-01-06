@@ -3,7 +3,7 @@ import about from '../../assets/about.jpg'
 import { Link } from 'react-router-dom';
 const AboutUs = () => {
     return (
-        <div className='mt-20 w-5/6 mx-auto clear-start md:flex gap-6'>
+        <div className='mt-20 w-11/12 mx-auto clear-start md:flex gap-6'>
             <div className='md:w-1/2'>
                 <img src={about} alt="" />
 
